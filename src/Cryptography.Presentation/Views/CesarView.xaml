@@ -1,0 +1,24 @@
+﻿<Window x:Class="Cryptography.Presentation.Views.CesarView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="Cesar"
+        ResizeMode="NoResize"
+        WindowStartupLocation="CenterOwner"
+        Height="120"
+        Width="300"
+        Background="{DynamicResource MaterialDesignPaper}"
+        FontFamily="{DynamicResource MaterialDesignFont}">
+
+	<StackPanel>
+
+		<Label Margin="10"
+		       Content="Key: " />
+
+		<TextBox x:Name="Key"
+		         Margin="10,0,10,10"
+		         Style="{StaticResource MaterialDesignTextBox}" />
+	</StackPanel>
+</Window>
