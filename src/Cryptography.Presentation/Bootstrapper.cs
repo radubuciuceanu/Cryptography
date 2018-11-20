@@ -14,7 +14,7 @@ namespace Cryptography.Presentation
 		protected override void OnStartup(object sender, StartupEventArgs e)
 		{
 			var windowManager = IoC.Get<IWindowManager>();
-			windowManager.ShowWindow(new CryptographyViewModel());
+			windowManager.ShowWindow(new CryptographyViewModel(windowManager));
 		}
 	}
 }

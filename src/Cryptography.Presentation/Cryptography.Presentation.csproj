@@ -59,7 +59,11 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Bootstrapper.cs" />
+    <Compile Include="ViewModels\CesarViewModel.cs" />
     <Compile Include="ViewModels\CryptographyViewModel.cs" />
+    <Compile Include="Views\CesarView.xaml.cs">
+      <DependentUpon>CesarView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\CryptographyView.xaml.cs">
       <DependentUpon>CryptographyView.xaml</DependentUpon>
     </Compile>
@@ -90,7 +94,12 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\Cryptography.Business\Cryptography.Business.csproj">
+      <Project>{C8D6005D-8863-4D11-93AA-E24A6E2D3ECC}</Project>
+      <Name>Cryptography.Business</Name>
+    </ProjectReference>
+  </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Caliburn.Micro">
       <Version>3.2.0</Version>
@@ -100,6 +109,10 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
+    <Page Include="Views\CesarView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\CryptographyView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
