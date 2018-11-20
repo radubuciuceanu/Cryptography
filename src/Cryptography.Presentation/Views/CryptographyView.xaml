@@ -12,62 +12,48 @@
         FontFamily="{DynamicResource MaterialDesignFont}">
 
 	<StackPanel>
-		<Menu IsMainMenu="True">
 
-			<MenuItem Header="_File">
-				<MenuItem Header="Save">
-					<MenuItem.Icon>
-						<materialDesign:PackIcon Kind="ContentSave" />
-					</MenuItem.Icon>
-				</MenuItem>
-				<MenuItem Header="Save As.." />
-				<MenuItem Header="Exit"
-				          InputGestureText="Ctrl+E">
-					<MenuItem.Icon>
-						<materialDesign:PackIcon Kind="ExitToApp" />
-					</MenuItem.Icon>
-				</MenuItem>
-				<Separator />
-				<MenuItem Header="Excellent"
-				          IsCheckable="True"
-				          IsChecked="True" />
-				<MenuItem Header="Rubbish"
-				          IsCheckable="True" />
-				<MenuItem Header="Dig Deeper"
-				          InputGestureText="Ctrl+D">
-					<MenuItem Header="Enlightenment?"
-					          IsCheckable="True" />
-					<MenuItem Header="Disappointment"
-					          IsCheckable="True" />
-				</MenuItem>
-				<MenuItem Header="Look Deeper"
-				          InputGestureText="Ctrl+D">
-					<MenuItem Header="Plain" />
-					<MenuItem Header="Ice Cream" />
-				</MenuItem>
+		<Menu IsMainMenu="True"
+		      Height="30">
+
+			<MenuItem Header="_Encrypt"
+			          Height="30">
+
+				<MenuItem x:Name="CesarEncrypt"
+				          Header="Cesar" />
 			</MenuItem>
 
-			<MenuItem Header="_Edit">
+			<MenuItem Header="_Decrypt"
+			          Height="30">
 
-				<MenuItem Header="_Cut"
-				          Command="Cut">
-					<MenuItem.Icon>
-						<materialDesign:PackIcon Kind="ContentCut" />
-					</MenuItem.Icon>
-				</MenuItem>
-				<MenuItem Header="_Copy"
-				          Command="Copy">
-					<MenuItem.Icon>
-						<materialDesign:PackIcon Kind="ContentCopy" />
-					</MenuItem.Icon>
-				</MenuItem>
-				<MenuItem Header="_Paste"
-				          Command="Paste">
-					<MenuItem.Icon>
-						<materialDesign:PackIcon Kind="ContentPaste" />
-					</MenuItem.Icon>
-				</MenuItem>
+				<MenuItem Header="Cesar" />
 			</MenuItem>
 		</Menu>
+
+		<materialDesign:Card Margin="10,10,10,10">
+			<StackPanel>
+				<Label Margin="0,10,10,0">Enrypted:</Label>
+
+				<TextBox x:Name="Encrypted"
+				         Style="{StaticResource MaterialDesignTextBox}"
+				         Margin="10,0,10,10"
+				         AcceptsReturn="True"
+				         VerticalScrollBarVisibility="Auto"
+				         TextWrapping="Wrap" />
+			</StackPanel>
+		</materialDesign:Card>
+
+		<materialDesign:Card Margin="10,0,10,10">
+			<StackPanel>
+				<Label Margin="0,10,10,0">Decrypted:</Label>
+
+				<TextBox x:Name="Decrypted"
+				         Style="{StaticResource MaterialDesignTextBox}"
+				         Margin="10,0,10,10"
+				         AcceptsReturn="True"
+				         VerticalScrollBarVisibility="Auto"
+				         TextWrapping="Wrap" />
+			</StackPanel>
+		</materialDesign:Card>
 	</StackPanel>
 </Window>
